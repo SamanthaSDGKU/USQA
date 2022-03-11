@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title> User Stories Quality Analyzer </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .challenge.container {
+      width:100%;
+      padding:0;
+    }
+  </style>
+
+</head>
+
+<body style="background-color: #DFDFDF">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Menu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://forms.gle/r36oSg2PvDyLtqQy5" target="_blank">Webpage Survey </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row" style="background-color:white">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5" style="color:black"><b>User Stories Quality Analyzer</b></h1>
+        <h2 style="font-size:16pt;">Try your user story and see if it has the necessary quality for the next stage to becoming the next software innovation.</h2>
+        <img style="width:65%" src="static/images/AI-Programin2.png">
+         <p>  </p>
+         <p>  </p>
+
+
+        <!-- TEXT REQUEST USER STORIES -->
+        <form method="POST">
+          <label for="us_text">Write Your User Story:</label><br>
+          <input class="form-control" type="text" id="us_text" name="us_text"
+          placeholder="As a <user>, I want <something> to <benefit>..."
+          size="101"
+          autofocus><br>
+           <p>  </p>
+          <input type="submit" value="Send">
+        </form>
+
+        <form>
+          <!-- <label for="us_respond">System response:</label><br>
+          <input type="text" id="us_respond" name="us_respond"
+          size="300"
+          readonly> -->
+          <label for="us_respond">{{ system }}</label><br>
+          <textarea class="form-control" name="Text1" cols="76" rows="5" readonly>{{ text }}</textarea>
+        </form>
+
+
+        <p style="padding-top:30px"><a href="#" style="color:#777777">Background</a></p>
+        <p style="text-align:justify; max-width:600px; margin:auto; padding-bottom:30px;"> Scrum Methodology being one of the most popular technique for agile software development presents great working strategies to fast innovate and develop software, but one of the weak points is the construction of quality user stories they could make efficient the software delivery, to start tackling this problem we investigated the composition of the scrum methodology and the user stories and the type of user stories to start a brainstorm and find solutions of how to evaluate the quality of user story and give a fast feedback to the user so it could be correct and to be the closest to perfect user stories</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container challenge" style="padding-bottom:30px;">
+    <h3 style="font-size:16pt;padding-top:30px;text-align:center;">REVIEWS</h3>
+    <div class="row" style="background-color:white;">
+      <div class="col-sm-6 col-lg-3" style="border:5px solid #DFDFDF;background-color:white;padding:10px;">
+        <h6><b>Well-formed</b></h6>
+        <p>Before it can be considered a user story, the core text of the requirement needs to include a role and the expected functionality: the means. like the next
+          example: "I want to see an error when I cannot see recommendations after I upload an article" does not adhere to this syntax, as it has no role. It is likely
+          that the user story writer has forgotten to include the role. The story can be fixed by adding the role: ‘‘As a Member, I want to see an error when I cannot see
+          recommendations after I upload an article.’’</p>
+      </div>
+      <div class="col-sm-6 col-lg-3" style="border:5px solid #DFDFDF;background-color:white;padding:10px;">
+        <h6><b>Atomic</b></h6>
+        <p>A user story should concern only one feature. Although common in practice, merging multiple user stories into a larger, generic one diminishes the accuracy of
+          effort estimation. for example the next user story:"As a User, I am able to click a particular location from the map and thereby perform a search of landmarks
+          associated with that latitude longitude combination" The user story consists of two separate requirements: the act of clicking on a location and the display of
+          associated landmarks. This user story should separate </p>
+        <p>• ‘‘As a User, I’m able to click a particular location from the map’’ </p>
+        <p>• ‘‘As a User, I’m able to see landmarks associated with the latitude and longitude combination of a particular location.’’</p>
+
+      </div>
+      <div class="col-sm-6 col-lg-3" style="border:5px solid #DFDFDF;background-color:white;padding:10px;">
+        <h6><b>Unambiguous</b></h6>
+        <p>Ambiguity is intrinsic to natural language requirements; the requirements engineer writing user stories has to avoid it to the extent this is possible.
+          Not only should a user story be internally unambiguous, but it should also be clear in relationship to all other user stories. The Taxonomy of Ambiguity Types
+          is a comprehensive overview of the kinds of ambiguity that can be encountered in a systematic requirements specification. In next story "As a User, I am able to
+           edit the content that I added to a person’s profile page", ‘‘content’’ is a superclass referring to audio, video, and textual media uploaded to the profile page
+           as specified in three other, separate user stories in the real-world user story set. The requirements engineer should explicitly mention which media are editable;
+          for example, the story can be modified as follows:‘‘As a User, I am able to edit video, photo and audio content that I added to a person’s profile page.’’</p>
+      </div>
+      <div class="col-sm-6 col-lg-3" style="border:5px solid #DFDFDF;background-color:white;padding:10px;">
+        <h6><b>Full sentence</b></h6>
+        <p>A user story should read like a full sentence, without typos or grammatical errors. For instance, the next user story: "Server configuration" is not expressed as a full sentence (in addition to not
+          complying with syntactic quality). By reformulating the feature as a full sentence user story, it will automatically specify what exactly needs to be configured.
+           For example, we can modified to ‘‘As an Administrator, I want to configure the server’s sudo-ers.’’</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/jquery/jquery.slim.min.js"></script>
+  <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>
